@@ -1,23 +1,17 @@
 const { program } = require("commander");
-
 const { version, tplMap } = require("./utils/contants.js");
-const { log, assert, checkTplName } = require("./utils/util");
+const { chooseTpl } = require("./utils/inquirer");
 const chalk = require("chalk");
 // 指定cli版本号
 program.version(version, "-v, --version", "获取mfan-cli版本号");
 // 配置命令
 program
-  .command("create <template-name> [project-name]")
+  .command("create <project-name>")
   .alias("cr")
   .description("拉取github模版创建项目")
-  .action((templateName, projectName) => {
-    if (!checkTplName(templateName)) {
-      return false;
-    }
-    if (!assert(projectName, `您还没有输入projectName`)) {
-      return false;
-    }
-
+  .action(async projectName => {
+    const answers = await chooseTpl();
+    const templateName = answers.tpl;
     require("./utils/create")(templateName, projectName);
   });
 program

@@ -35,12 +35,11 @@ module.exports = async (templateName, projectName) => {
   await clone(tpl.repository, projectName);
   // 安装依赖
   console.log(" ");
-  const spiner = ora(`install...`);
-  spiner.start();
+  log(`install...`);
   await spawn("npm", ["install"], { cwd: `./${projectName}` });
   // 安装完成，清屏显示说明
   clear();
-  spiner.succeed("install complete");
+  log("install complete");
   console.log(
     chalk.green(`
 
