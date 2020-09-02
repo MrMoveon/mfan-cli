@@ -6,6 +6,10 @@
   "bin": {
     "mfan-cli": "./bin/mfan-cli.js"
   },
+  "files": [
+    "src",
+    "bin"
+  ],
   "directories": {
     "lib": "lib"
   },
