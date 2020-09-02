@@ -1,0 +1,41 @@
+{
+  "name": "mfan-cli",
+  "version": "0.0.1",
+  "description": "mfan cli",
+  "main": "./src/main.js",
+  "bin": {
+    "mfan-cli": "./bin/mfan-cli.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrMoveon/mfan-cli.git"
+  },
+  "keywords": [
+    "mfan",
+    "cli",
+    "gulp",
+    "vue"
+  ],
+  "author": "afei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrMoveon/mfan-cli/issues"
+  },
+  "homepage": "https://github.com/MrMoveon/mfan-cli#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "commander": "^6.1.0",
+    "cross-spawn": "^7.0.3",
+    "download-git-repo": "^3.0.2",
+    "figlet": "^1.5.0",
+    "open": "^7.2.1",
+    "ora": "^5.0.0"
+  }
+}
